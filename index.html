@@ -1,20 +1,39 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>抖內我</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #donate {
+            margin-bottom: 10px;
+        }
+    </style>
+
 </head>
 <body>
     <button id="donate">請抖內我</button>
-    <img id="QRcode" src="photo/QRcode.png" style="display:none" />
+    <p id="message" style="display:none">請用銀行的QRCode掃碼器掃我</p>
+    <img id="QRcode" src="photo/QRcode.png" style="display:none" title="請用銀行的QRCode掃碼器掃我" />
 
     <script>
 
         var donate = document.getElementById("donate")
+        var message = document.getElementById("message");
         var QRcode = document.getElementById("QRcode")
 
         donate.addEventListener("click", function () {
 
+            message.style.display = "block";
             QRcode.style.display = "block";
         })
 
