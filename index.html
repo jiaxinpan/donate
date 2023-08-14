@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <button id="donate">請抖內我</button>
+    <img id="QRcode" src="photo/QRcode.png" style="display:none" />
+
+    <script>
+
+        var donate = document.getElementById("donate")
+        var QRcode = document.getElementById("QRcode")
+
+        donate.addEventListener("click", function () {
+
+            QRcode.style.display = "block";
+        })
+
+    </script>
+
+</body>
+</html>
